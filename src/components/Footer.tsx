@@ -1,82 +1,58 @@
-import { Wine, Facebook, Instagram, Mail, Phone } from 'lucide-react';
-
 const Footer = () => {
   return (
-    <footer className="bg-card border-t border-border">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Brand */}
-          <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="bg-gradient-primary p-2 rounded-lg">
-                <Wine className="h-6 w-6 text-primary-foreground" />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-                  COCKTAIL CARAVAN
-                </h3>
-                <p className="text-sm text-muted-foreground">SIP SHAKE AND CELEBRATE</p>
-              </div>
-            </div>
-            <p className="text-muted-foreground max-w-sm">
-              Bringing exceptional mobile bar experiences to events across the Greater Toronto Area. 
-              Professional bartenders, premium cocktails, unforgettable memories.
+    <footer className="bg-gray-100 py-8 border-t border-gray-200">
+      <div className="container mx-auto px-4">
+        {/* reCAPTCHA Notice */}
+        <div className="text-center">
+          <div className="mb-4">
+            <p className="text-sm text-gray-600">reCAPTCHA</p>
+            <p className="text-sm text-gray-500 mb-2">Recaptcha requires verification.</p>
+          </div>
+          
+          <div className="flex justify-center items-center space-x-4 text-xs text-gray-500">
+            <a 
+              href="https://www.google.com/intl/en/policies/privacy/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-gray-700 transition-colors duration-300"
+            >
+              Privacy
+            </a>
+            <span>-</span>
+            <a 
+              href="https://www.google.com/intl/en/policies/terms/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-gray-700 transition-colors duration-300"
+            >
+              Terms
+            </a>
+          </div>
+          
+          <div className="mt-4">
+            <p className="text-xs text-gray-500">
+              protected by <strong>reCAPTCHA</strong>
             </p>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4 text-foreground">Quick Links</h4>
-            <nav className="space-y-2">
-              {['Home', 'Our Stylish Setup', 'Services', 'About Us', 'Contact Us', 'FAQs'].map((link) => (
-                <a
-                  key={link}
-                  href={`#${link.toLowerCase().replace(/\s+/g, '-')}`}
-                  className="block text-muted-foreground hover:text-primary transition-colors duration-200"
-                >
-                  {link}
-                </a>
-              ))}
-            </nav>
-          </div>
-
-          {/* Contact & Social */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4 text-foreground">Connect With Us</h4>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <Mail className="h-4 w-4 text-primary" />
-                <span className="text-muted-foreground">info@cocktailcaravan.com</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Phone className="h-4 w-4 text-primary" />
-                <span className="text-muted-foreground">(555) 123-COCKTAIL</span>
-              </div>
-            </div>
-            
-            {/* Social Links */}
-            <div className="flex space-x-4 mt-6">
-              <a
-                href="#"
-                className="bg-gradient-primary p-2 rounded-full hover:opacity-80 transition-opacity"
+            <div className="flex justify-center items-center space-x-4 text-xs text-gray-500 mt-2">
+              <a 
+                href="https://www.google.com/intl/en/policies/privacy/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-gray-700 transition-colors duration-300"
               >
-                <Facebook className="h-5 w-5 text-primary-foreground" />
+                Privacy
               </a>
-              <a
-                href="#"
-                className="bg-gradient-primary p-2 rounded-full hover:opacity-80 transition-opacity"
+              <span>-</span>
+              <a 
+                href="https://www.google.com/intl/en/policies/terms/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-gray-700 transition-colors duration-300"
               >
-                <Instagram className="h-5 w-5 text-primary-foreground" />
+                Terms
               </a>
             </div>
           </div>
-        </div>
-
-        {/* Bottom */}
-        <div className="border-t border-border mt-8 pt-8 text-center">
-          <p className="text-muted-foreground">
-            © 2024 Cocktail Caravan. All rights reserved. | Booking now open for 2026!
-          </p>
         </div>
       </div>
     </footer>

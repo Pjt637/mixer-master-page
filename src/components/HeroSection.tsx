@@ -1,76 +1,81 @@
-import { Button } from '@/components/ui/button';
-import { Calendar, Sparkles } from 'lucide-react';
-import heroImage from '@/assets/hero-mobile-bar.jpg';
-
 const HeroSection = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src={heroImage}
-          alt="Mobile cocktail bar setup"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/40 to-background/80" />
-      </div>
-
-      {/* Content */}
-      <div className="relative z-10 text-center px-4 py-20 mt-16">
-        <div className="max-w-4xl mx-auto">
+    <main id="main" className="pt-32 pb-16">
+      {/* Hero Content */}
+      <div className="container mx-auto px-4">
+        <div className="text-center max-w-4xl mx-auto">
           {/* Booking Notice */}
-          <div className="inline-flex items-center space-x-2 bg-gradient-primary px-6 py-3 rounded-full mb-8 animate-float">
-            <Calendar className="h-5 w-5 text-primary-foreground" />
-            <span className="text-primary-foreground font-semibold">BOOKING OPEN FOR 2026</span>
+          <div className="mb-8">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-2">
+              BOOKING OPEN FOR
+            </h1>
+            <h1 className="text-6xl md:text-8xl font-bold text-pink-500 mb-8">
+              2026
+            </h1>
           </div>
 
-          {/* Main Heading */}
-          <h1 className="text-5xl md:text-7xl font-extrabold mb-6">
-            <span className="bg-gradient-hero bg-clip-text text-transparent">
-              Cocktail Caravan
-            </span>
-          </h1>
-
-          {/* Subheading */}
-          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
-            Sip Shake and Celebrate
+          {/* Main Title */}
+          <h2 className="text-5xl md:text-7xl font-bold text-gray-800 mb-4">
+            Cocktail Caravan
           </h2>
 
+          {/* Subtitle */}
+          <h3 className="text-2xl md:text-3xl font-semibold text-gray-700 mb-6">
+            Sip Shake and Celebrate
+          </h3>
+
           {/* Description */}
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8 leading-relaxed">
             Let us bring the party straight to you with our sensational cocktails and upbeat bartenders! 
             Get ready to elevate the excitement, sip on pure joy, and watch the celebration explode into 
             an unforgettable experience!
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button 
-              size="lg" 
-              className="bg-gradient-primary hover:opacity-90 text-primary-foreground px-8 py-6 text-lg font-semibold shadow-glow animate-pulse-glow"
+          {/* CTA Button */}
+          <div className="mb-16">
+            <a 
+              href="#contact" 
+              className="inline-block bg-pink-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-pink-600 transition-colors duration-300 shadow-lg"
             >
-              <Sparkles className="mr-2 h-5 w-5" />
               Book Online
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-6 text-lg font-semibold"
+            </a>
+          </div>
+        </div>
+
+        {/* Early Bird Sections */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
+          {/* First Early Bird */}
+          <div className="text-center bg-pink-50 p-8 rounded-lg">
+            <h3 className="text-2xl font-bold text-pink-500 mb-2">get early bird</h3>
+            <h3 className="text-2xl font-bold text-pink-500 mb-4">discount</h3>
+            <h4 className="text-lg font-semibold text-gray-700 mb-4">
+              Advance Reserve Now and Be Ready for 2026
+            </h4>
+            <a 
+              href="#contact" 
+              className="inline-block bg-pink-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-pink-600 transition-colors duration-300"
             >
-              Contact Us
-            </Button>
+              CONTACT US
+            </a>
           </div>
 
-          {/* Early Bird Notice */}
-          <div className="mt-12 p-6 bg-card/90 backdrop-blur-sm rounded-2xl border border-border shadow-card max-w-2xl mx-auto">
-            <h3 className="text-xl font-bold text-accent mb-2">Get Early Bird Discount</h3>
-            <p className="text-muted-foreground">
-              Advance Reserve Now and Be Ready for 2026. Contact us by December 31, 2025 for exclusive savings!
-            </p>
+          {/* Second Early Bird */}
+          <div className="text-center bg-pink-50 p-8 rounded-lg">
+            <h3 className="text-2xl font-bold text-pink-500 mb-2">get early bird</h3>
+            <h3 className="text-2xl font-bold text-pink-500 mb-4">discount</h3>
+            <h4 className="text-lg font-semibold text-gray-700 mb-4">
+              Advance Reserve Now and Be Ready for 2025
+            </h4>
+            <a 
+              href="#contact" 
+              className="inline-block bg-pink-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-pink-600 transition-colors duration-300"
+            >
+              Booking Now
+            </a>
           </div>
         </div>
       </div>
-    </section>
+    </main>
   );
 };
 
